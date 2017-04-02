@@ -228,9 +228,9 @@ public class Test1 {
                         expression = "( " + a + returnSign(sign1) + b + " )" + returnSign(sign2) + c;
                     } else {
                         String temp = b + returnSign(sign2) + c;
-                        while (evaluateExpression(temp) == "0") {
-                            b = r.nextInt(N);
-                            c = r.nextInt(N);
+                        while (evaluateExpression(temp).equals("0")) {
+                            b = r.nextInt(N-1)+1;
+                            c = r.nextInt(N-1)+1;
                             temp = b + returnSign(sign2) + c;
                         }
                         expression = a + returnSign(sign1) + "( " + b + returnSign(sign2) + c + " )";
